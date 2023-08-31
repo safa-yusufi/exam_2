@@ -1,0 +1,22 @@
+
+{% extends "master.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Document</title>{% endblock %}
+  
+</head>
+<body>
+   
+    {% block content %}
+    {% for blog_post in blog_posts %}
+    <h2>{{ blog_post.title }} :</h2>
+    <p>{{ blog_post.content }}</p>
+    <p>Published on: {{ blog_post.pub_date }}</p>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>
